@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Home</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="hd"></div>
+<section class="hero"><div><h1>The outerwear edit</h1><a class="btn w" href="collection.html?c=all">Shop new in</a></div></section>
+<div class="strip">New season, new layers</div>
+<div class="tiles" id="tiles"></div>
+<h2 class="sec">New in</h2>
+<div class="grid" id="gr"></div>
+<div id="ft"></div>
+<script src="app.js"></script>
+<script>
+$("#tiles").innerHTML=["shirts","jeans"].map(k=>{const p=P.find(x=>x.c==k);return `<a class="tile" href="collection.html?c=${k}">${img(p)}<div class="cap">${C[k]}<br><small>Explore</small></div></a>`}).join("");
+$("#gr").innerHTML=P.slice(0,6).map(card).join("");
+</script>
+</body></html>

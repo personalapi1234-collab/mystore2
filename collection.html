@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Collection</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="hd"></div>
+<h1 class="sec" id="t"></h1>
+<div class="grid" id="gr"></div>
+<div id="ft"></div>
+<script src="app.js"></script>
+<script>
+const c=new URLSearchParams(location.search).get("c")||"all";
+const list=c=="all"?P:P.filter(p=>p.c==c);
+$("#t").textContent=C[c]||"New in";
+$("#gr").innerHTML=list.length?list.map(card).join(""):"<p>No products here yet.</p>";
+</script>
+</body></html>
